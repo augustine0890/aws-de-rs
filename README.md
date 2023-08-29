@@ -1,4 +1,4 @@
-# Data Engineering with AWS and Rust
+# Data Engineering with AWS
 
 This repository is dedicated to practicing and learning data engineering on AWS using the Rust programming language. The goal is to build efficient, safe, and reliable data processing pipelines while leveraging the unique features of Rust and the powerful tools provided by AWS.
 
@@ -26,8 +26,8 @@ This repository is organized into different directories, each focusing on a spec
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/augustine0890/data-engineering-aws-rust.git
-cd data-engineering-aws-rust
+git clone https://github.com/augustine0890/data-engineering-aws.git
+cd data-engineering-aws
 ```
 
 
