@@ -47,4 +47,41 @@
 ## Case Study
 
 # Storing data
+## Data structures
+- Structured data
+    - Easy to search and organize
+    - Consistent model, rows and columns
+    - Defined types
+    - Can be grouped to form relations
+- Semi-structured data
+    - Relatively easy to search and organize
+- Unstructured data
+    - Does not follow a model, can't be contained in rows and columns
+    - Difficult to search and organize
+    - Usually text, sound, pictures or videos
+    - Usually stored in data lakes, can appear in data warehouses or databases
+
+## SQL databases
+- Allows you to access many records at once, and group, filter or aggregate them
+- Data engineers use SQL to create and maintain databases
+## Data warehouse and data lakes
+- Data lake:
+    - Stores all the raw data (all data structures)
+    - Can be petabytes
+    - Cost-effective
+    - Difficult to analyze
+    - Requires an up-to-date data catalog
+    - Big data, real-time analytics
+- Data warehouse: type of database
+    - Specific data for specific use (mainly structured data)
+    - Optimized for data analysis
+    - Ad-hoc, read-only queries
+- Data catalog for data lakes
+    - What is the source of this data?
+    - Where is this data used?
+    - Who is the owner of the data?
+    - How often is the data updated?
+    - Ensures reproducibility
+
 # Moving and processing data
+## Processing data
