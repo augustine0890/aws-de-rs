@@ -43,6 +43,21 @@
     - Data may be directly loaded in applications
 
 ## Data Engineering Toolbox
+### Database
+- A usually large collection of data organized especially for rapid search and retrieval (holds, retrieve/search, and organizes data)
+- SQL and NoSQL
+- The star schema consists of one or more fact tables referencing any number of dimension tables
+    - Facts: things that happened
+    - Dimensions: information on the world
+### Parallel computing
+- Apache Hadoop (HDFS, Hive, MapReduce)
+- Apache Spark: avoid disk writes
+    - Resilient distributed datasets (RDD)
+    - PySpark: python interface to Spark
+### Workflow scheduling
+- Spotify's Luigi
+- Apache Airflow (DAGs)
+
 ## Extract - Transfrom - Load (ETL)
 ## Case Study
 
