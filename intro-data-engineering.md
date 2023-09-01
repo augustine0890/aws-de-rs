@@ -85,3 +85,34 @@
 
 # Moving and processing data
 ## Processing data
+- Converting raw data into meaningful information
+- Remove unwanted data
+- Convert data from one type to another
+- Organize data
+- To fit into a schema/structure
+- Increase productivity
+- How data engineers process data:
+    - Data manipulation, cleaning, and tidying tasks
+    - Store data in a sanely structured database
+    - Create views on top of the database tables
+    - Optimizing the performance of the database
+
+## Scheduling data
+- Can apply to any task listed in data processing
+- Holds each piece and organize how they work together
+- Runs tasks in a specific order and resolvies all dependencies
+- Batches
+    - Group records at intervals
+    - Cheap
+- Streams
+    - Send individual records right away
+
+## Parallel computing
+- Split tasks up into several smaller subtasks
+- Distribute these subtasks over several computers
+- Extra processing power, reduced memory footprint
+- Disadvantages: moving data incurs a cost, communication time
+
+## Cloud computing
+- Database reliability: data replication
+- Risk with sensitive data
