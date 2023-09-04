@@ -12,6 +12,7 @@ jobs:
             pipenv install
       - run:
           command: |
+            pipenv run flake8 .
             pipenv run pytest .
       - store_test_results:
           path: test-results
