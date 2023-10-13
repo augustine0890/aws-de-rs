@@ -13,17 +13,17 @@ pub struct Movie {
 
 #[derive(Debug, Serialize, Deserialize, Clone, Default)]
 pub struct Info {
-    pub directors: Vec<String>,
-    #[serde(rename = "releaseDate")]
+    pub directors: Option<Vec<String>>,
+    #[serde(rename = "releaseDate", skip_deserializing)]
     #[serde(with = "bson::serde_helpers::chrono_datetime_as_bson_datetime")]
     pub release_date: chrono::DateTime<Utc>,
-    pub rating: f32,
-    pub genres: Vec<String>,
-    #[serde(rename = "imageUrl")]
+    pub rating: Option<f32>,
+    pub genres: Option<Vec<String>>,
+    #[serde(rename = "imageUrl", skip_deserializing)]
     pub image_url: String,
-    pub plot: String,
+    pub plot: Option<String>,
     pub rank: u32,
-    #[serde(rename = "runningTimeSecs")]
+    #[serde(rename = "runningTimeSecs", skip_deserializing)]
     pub running_time_secs: u64,
-    pub actors: Vec<String>,
+    pub actors: Option<Vec<String>>,
 }
