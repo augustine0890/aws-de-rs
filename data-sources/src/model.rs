@@ -27,3 +27,8 @@ pub struct Info {
     pub running_time_secs: u64,
     pub actors: Option<Vec<String>>,
 }
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct Config {
+    pub mongo_uri: String,
+}

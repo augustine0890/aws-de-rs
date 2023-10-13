@@ -1,4 +1,5 @@
 pub mod model;
+pub mod mongo;
 
 use model::Movie;
 use serde_json;
