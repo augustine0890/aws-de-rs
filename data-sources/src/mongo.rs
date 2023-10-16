@@ -5,7 +5,7 @@ use std::fs::File;
 use std::io::Read;
 use std::path::Path;
 
-use crate::model;
+use crate::model::{self, Movie};
 
 pub fn read_config() -> Config {
     let mut file = File::open(Path::new("config.yaml")).expect("Couldn't open config.yaml");
@@ -25,3 +25,40 @@ pub async fn connect_mongo() -> Result<Database, Error> {
         Client::with_options(client_options).expect("Failed to initialize standalone client");
     Ok(client.database("test"))
 }
+
+pub async fn insert_many_movies(db: &Database, movies: Vec<Movie>) -> Result<(), Error> {
+    let collection = db.collection::<mongodb::bson::Document>("movies");
+    // Convert Vec<Movie> into Vec<Document>
+    let documents: Vec<bson::Document> = movies
+        .into_iter()
+        .map(|movie| {
+            bson::to_bson(&movie)
+                .unwrap()
+                .as_document()
+                .unwrap()
+                .clone()
+        })
+        .collect();
+
+    // Insert documents into the collection
+    collection.insert_many(documents, None).await?;
+    Ok(())
+}
+
+// pub async fn insert_many(db: &Database, movies: Vec<Movie>) -> Result<(), Error> {
+// let collection = db.collection::<mongodb::bson::Document>("movies");
+// // Convert Vec<Movie> into Vec<Document>
+// let documents: Vec<bson::Document> = movies
+// .into_iter()
+// .map(|movie| {
+// match bson::to_bson(&movie).unwrap() {
+// bson::Bson::Document(document) => document,
+// _ => panic!("Expected a Document"),
+// }
+// })
+// .collect();
+
+// // Insert documents into the collection
+// collection.insert_many(documents, None).await?;
+// Ok(())
+// }
