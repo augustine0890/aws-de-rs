@@ -1,6 +1,19 @@
-use chrono::Utc;
+use chrono::{DateTime, Utc};
 use mongodb::bson::oid::ObjectId;
-use serde::{Deserialize, Serialize};
+use serde::{Deserialize, Deserializer, Serialize};
+
+fn deserialize_date<'de, D>(deserializer: D) -> Result<Option<DateTime<Utc>>, D::Error>
+where
+    D: Deserializer<'de>,
+{
+    let s: Option<String> = Option::deserialize(deserializer)?;
+    match s {
+        Some(s) => DateTime::parse_from_rfc3339(&s)
+            .map(|dt| Some(dt.with_timezone(&Utc)))
+            .map_err(serde::de::Error::custom),
+        None => Ok(None),
+    }
+}
 
 #[derive(Debug, Serialize, Deserialize, Clone, Default)]
 pub struct Movie {
@@ -14,17 +27,21 @@ pub struct Movie {
 #[derive(Debug, Serialize, Deserialize, Clone, Default)]
 pub struct Info {
     pub directors: Option<Vec<String>>,
-    #[serde(rename = "releaseDate", skip_deserializing)]
-    #[serde(with = "bson::serde_helpers::chrono_datetime_as_bson_datetime")]
-    pub release_date: chrono::DateTime<Utc>,
+    #[serde(
+        default,
+        rename = "releaseDate",
+        alias = "release_date",
+        deserialize_with = "deserialize_date"
+    )]
+    pub release_date: Option<chrono::DateTime<Utc>>,
     pub rating: Option<f32>,
     pub genres: Option<Vec<String>>,
-    #[serde(rename = "imageUrl", skip_deserializing)]
-    pub image_url: String,
+    #[serde(rename = "imageUrl", alias = "image_url")]
+    pub image_url: Option<String>,
     pub plot: Option<String>,
     pub rank: u32,
-    #[serde(rename = "runningTimeSecs", skip_deserializing)]
-    pub running_time_secs: u64,
+    #[serde(rename = "runningTimeSecs", alias = "running_time_secs")]
+    pub running_time_secs: Option<u64>,
     pub actors: Option<Vec<String>>,
 }
 
