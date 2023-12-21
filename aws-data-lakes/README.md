@@ -25,10 +25,18 @@
 
 ### Example architecture
 - Some common architectures use data lakes to ingest, store, and clean data. Then, the solutions architect can move that data into a data warehouse for visualization.
-- S3: 
-    - Object storage (logs, images, videos, and archives) unstructured and semi-structured data
-    - Not directly designed for complex data analysis
 - Kinesis firehose: ETL service from AWS. It takes real-time, streaming data and seamlessly delivers it to various destinations likes data lakes, data stores, and analytics services.
 ```
 Web servers --(send web logs)--> Kinesis firehose -(store)-> S3 <--(query SQL)-- Athena (insights: http errors or unique visitors)
 ``````
+
+## AWS Data Services
+### Data storage, cataloging, and  indexing
+- S3: 
+    - Object storage (logs, images, videos, and archives) unstructured and semi-structured data
+    - Scalability and cost-effectiveness: highly scalable and offers varying storage classes for cost-optimization based on access frequency.
+    - Simple access: easily accessed through APIs, AWS SDKs, and various third-party tools.
+    - Not directly designed for complex data analysis
+
+### Data movement (ingest data into data lake)
+### Data analytics and processing
