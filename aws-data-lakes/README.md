@@ -32,11 +32,16 @@ Web servers --(send web logs)--> Kinesis firehose -(store)-> S3 <--(query SQL)--
 
 ## AWS Data Services
 ### Data storage, cataloging, and  indexing
-- S3: 
+- AWS S3: 
     - Object storage (logs, images, videos, and archives) unstructured and semi-structured data
     - Scalability and cost-effectiveness: highly scalable and offers varying storage classes for cost-optimization based on access frequency.
     - Simple access: easily accessed through APIs, AWS SDKs, and various third-party tools.
     - Not directly designed for complex data analysis
-
+- AWS Glue:
+    - Serverless data processing and cataloging service
+    - Data Catalog is the central metadata repository
+    - Drop in replacement for Apache Hive Meatastore
+    - Crawlers can scan data in all kinds of repositories, classify it, extract schema information from it, and store the metadata automatically in the AWS Glue Data Catalog.
+    - Crawlers use classifiers, reads the data in a data store. If it recognizes the format of the data, it generates a schema.
 ### Data movement (ingest data into data lake)
 ### Data analytics and processing
