@@ -20,6 +20,15 @@
     - Instrument code for observability
     - Optimize application by using AWS services and features
     - Amazon CloudWatch, AWS CloudTrail, AWS X-Ray
+- __Common question themes__:
+    - Being highly available, cost-effective, the most secure, performance improvement, and the least amount of downtime
+    - AWS exam questions focus on the use of its services and features.
 
+## Compute
+- Amazon Elastic Compute Cloud (EC2)
+    - AMIs are templates of pre-configured EC2 instances, which allow you to quickly launch a new EC2 instance based on the configuration defined within the AMI.
+- AWS Elastic Beanstalk
+- AWS Lambda
+- AWS Serverless Application Model (SAM)
 ## IAM
 - IAM: Identity and Access Management, Global service
