@@ -54,8 +54,20 @@
 - Kinesis Consumer Library process the data from Kinesis Data Stream:
   - Uses shard iterator with shard id to retrieve records
   - If a KCL read fails, the KCL can use the checkpoint cursor to resume at the failed record:
-    - Use `IRecordProcessorCheckpointer` in Java and `amazon_kclpy.kcl.Checkpointer` in Python
+    - Use `IRecordProcessorCheckpointer` in Java and `amazon_kclpy.kcl.Checkpointer` in Python.
 
+**Kinesis Data Firehose Lab**
+- Fully managed that delivers directly to S3, Redshift, Elasticsearch, and Splunk.
+- Can also feed Kinesis Data Analytics
+- Can optionally transform your data, using Lambda, before delivering it to its destination
+- Firehose `Producers` send records to Firehose:
+  - Web server logs data
+  - Kinesis Data Stream
+  - Kinesis Agent
+  - Kinesis Firehouse API using the AWS SDK
+  - CloudWatch logs and/or events
+  - AWS IoT
+  - Firehose buffers incoming streaming data for a set buffer size (MBs) and a buffer interval (seconds)
 
 2. Data Integration Services in AWS
 - Analyze Frequency, Volume, Batch, Streaming and transactional data
