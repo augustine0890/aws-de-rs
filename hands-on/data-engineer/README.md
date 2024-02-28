@@ -23,3 +23,10 @@
   - Plan jobs with specific intervals
   - Resolve dependency requirements of jobs
   - Apache Airflow, Oozie, Luigi: describing, executing, and monitoring workflows or pipelines.
+
+## ETL Pipelines
+- **Online Transaction Processing (OLTP)**
+  - Application db, many transactions, row oriented, stored per record.
+- **Online Analytical Processing (OLAP)**
+  - Analytical database, aggregate queries, column oriented, parallelization.
+-  How to install [PySpark](https://sparkbyexamples.com/pyspark/how-to-install-pyspark-on-mac/) on Mac
