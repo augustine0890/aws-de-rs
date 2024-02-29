@@ -1,0 +1,7 @@
+[2024-02-29T18:04:15.542+0900] {processor.py:161} INFO - Started process (PID=49075) to work on /Users/supertree/Documents/code/data-engineering-aws/hands-on/data-engineer/.venv/lib/python3.11/site-packages/airflow/example_dags/tutorial.py
+[2024-02-29T18:04:15.543+0900] {processor.py:830} INFO - Processing file /Users/supertree/Documents/code/data-engineering-aws/hands-on/data-engineer/.venv/lib/python3.11/site-packages/airflow/example_dags/tutorial.py for tasks to queue
+[2024-02-29T18:04:15.544+0900] {logging_mixin.py:188} INFO - [2024-02-29T18:04:15.544+0900] {dagbag.py:540} INFO - Filling up the DagBag from /Users/supertree/Documents/code/data-engineering-aws/hands-on/data-engineer/.venv/lib/python3.11/site-packages/airflow/example_dags/tutorial.py
+[2024-02-29T18:04:15.550+0900] {processor.py:840} INFO - DAG(s) 'tutorial' retrieved from /Users/supertree/Documents/code/data-engineering-aws/hands-on/data-engineer/.venv/lib/python3.11/site-packages/airflow/example_dags/tutorial.py
+[2024-02-29T18:04:15.687+0900] {logging_mixin.py:188} INFO - [2024-02-29T18:04:15.687+0900] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-02-29T18:04:15.751+0900] {logging_mixin.py:188} INFO - [2024-02-29T18:04:15.751+0900] {dag.py:3834} INFO - Setting next_dagrun for tutorial to 2024-02-28 00:00:00+00:00, run_after=2024-02-29 00:00:00+00:00
+[2024-02-29T18:04:15.769+0900] {processor.py:183} INFO - Processing /Users/supertree/Documents/code/data-engineering-aws/hands-on/data-engineer/.venv/lib/python3.11/site-packages/airflow/example_dags/tutorial.py took 0.228 seconds

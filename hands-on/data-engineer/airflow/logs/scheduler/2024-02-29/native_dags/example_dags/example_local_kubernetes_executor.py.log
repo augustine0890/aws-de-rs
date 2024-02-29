@@ -1,0 +1,11 @@
+[2024-02-29T18:05:16.710+0900] {processor.py:161} INFO - Started process (PID=49123) to work on /Users/supertree/Documents/code/data-engineering-aws/hands-on/data-engineer/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-02-29T18:05:16.711+0900] {processor.py:830} INFO - Processing file /Users/supertree/Documents/code/data-engineering-aws/hands-on/data-engineer/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2024-02-29T18:05:16.712+0900] {logging_mixin.py:188} INFO - [2024-02-29T18:05:16.712+0900] {dagbag.py:540} INFO - Filling up the DagBag from /Users/supertree/Documents/code/data-engineering-aws/hands-on/data-engineer/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-02-29T18:05:16.738+0900] {logging_mixin.py:188} INFO - [2024-02-29T18:05:16.737+0900] {example_local_kubernetes_executor.py:39} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/Users/supertree/Documents/code/data-engineering-aws/hands-on/data-engineer/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2024-02-29T18:05:16.738+0900] {logging_mixin.py:188} INFO - [2024-02-29T18:05:16.738+0900] {example_local_kubernetes_executor.py:40} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2024-02-29T18:05:16.738+0900] {processor.py:842} WARNING - No viable dags retrieved from /Users/supertree/Documents/code/data-engineering-aws/hands-on/data-engineer/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-02-29T18:05:16.799+0900] {processor.py:183} INFO - Processing /Users/supertree/Documents/code/data-engineering-aws/hands-on/data-engineer/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.090 seconds
