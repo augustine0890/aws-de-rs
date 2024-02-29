@@ -29,4 +29,12 @@
   - Application db, many transactions, row oriented, stored per record.
 - **Online Analytical Processing (OLAP)**
   - Analytical database, aggregate queries, column oriented, parallelization.
--  How to install [PySpark](https://sparkbyexamples.com/pyspark/how-to-install-pyspark-on-mac/) on Mac
+- How to install [PySpark](https://sparkbyexamples.com/pyspark/how-to-install-pyspark-on-mac/) on Mac
+- Install `apache-airflow`: `pip install apache-airflow`
+- Initialize the database: `airflow db init`
+
+## Run Llama 2 Locally
+- Download the Large Language Model:
+  - [Hugging Face](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/tree/main) Host (All models)
+  - Model descriptions: [README](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML#provided-files)
+- Install the `llama-cpp-python` package: `pip install llama-cpp-python`

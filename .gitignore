@@ -11,3 +11,11 @@ Cargo.lock
 .cargo
 # The config yaml file
 config.yaml
+
+*.bin
+*.o
+*.pyc
+.DS_Store
+/build/
+/venv/
+/models/
